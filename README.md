@@ -11,7 +11,7 @@ import wisp_kv_sessions/ets_store
 
 pub fn main() {
   // Setup session_store
-  use ets_store <- result.map(ets_store.try_create_session_store(conn))
+  use ets_store <- result.map(ets_store.try_create_session_store("sessions_table"))
 
   // Create session config
   let session_config =
