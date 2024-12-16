@@ -4,10 +4,9 @@ import gleam/option
 import wisp_kv_sessions/session
 import wisp_kv_sessions/session_config
 
-pub fn try_create_session_store(table_name) {
+pub fn new(table_name) {
   let db = new_table(table_name)
   session_config.SessionStore(
-    default_expiry: 60 * 60,
     get_session: get_session(db),
     save_session: save_session(db),
     delete_session: delete_session(db),

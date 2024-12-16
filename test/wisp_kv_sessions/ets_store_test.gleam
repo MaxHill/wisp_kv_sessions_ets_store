@@ -1,14 +1,14 @@
 import gleeunit/should
-import wisp_kv_sessions/ets_store
+import wisp_kv_sessions/ets_adapter
 import wisp_kv_sessions/session
 
 pub fn set_get_session_test() {
   let session =
     session.builder()
-    |> session.set_key_value("test", "hello")
+    |> session.with_entry("test", "hello")
     |> session.build
 
-  let session_store = ets_store.try_create_session_store("test_table")
+  let session_store = ets_adapter.new("test_table")
 
   session_store.save_session(session)
   |> should.be_ok()
@@ -23,10 +23,10 @@ pub fn set_get_session_test() {
 pub fn set_delete_session_test() {
   let session =
     session.builder()
-    |> session.set_key_value("test", "hello")
+    |> session.with_entry("test", "hello2")
     |> session.build
 
-  let session_store = ets_store.try_create_session_store("test_table2")
+  let session_store = ets_adapter.new("test_table2")
 
   session_store.save_session(session)
   |> should.be_ok()
