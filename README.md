@@ -3,6 +3,9 @@
 [![Package Version](https://img.shields.io/hexpm/v/wisp_kv_sessions_ets_store)](https://hex.pm/packages/wisp_kv_sessions_ets_store)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/wisp_kv_sessions_ets_store/)
 
+# DEPRECATED
+This is now part of [kv_sessions](https://hexdocs.pm/wisp_kv_sessions)
+
 ```sh
 gleam add wisp_kv_sessions_ets_store@1
 ```

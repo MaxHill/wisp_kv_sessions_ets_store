@@ -6,6 +6,7 @@ version = "0.0.2"
 #
 description = "Erlang Term Storage (ETS) driver for wisp_kv_sessions"
 licences = ["Apache-2.0"]
+repository = { type = "github", user = "MaxHill", repo = "wisp_kv_sessions_postgres_store" }
 # repository = { type = "github", user = "", repo = "" }
 # links = [{ title = "Website", href = "" }]
 #
